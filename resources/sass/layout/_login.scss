@@ -1,0 +1,42 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+
+.main {
+
+}
+.contentt {
+    background-color: $color-gren-two;
+    padding: 2rem 0;
+    .container-login {
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+
+    }
+}
+
+.card {
+    text-align: center;
+    border-color: white;
+    color: white;
+    width: 100vh;
+    @include phone {
+        width: 90vh;
+    }
+    @include desktop {
+        width: 60vh;
+
+    }
+    .card-header {
+        background-color: $color-greys;
+
+    }
+
+    .card-body {
+        display: grid;
+        align-content: center;
+        background-color: $color-greys-one;
+
+    }
+  }

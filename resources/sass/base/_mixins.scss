@@ -1,0 +1,38 @@
+@import '../base/variables';
+
+
+@mixin phone {
+    @media ( max-width: $phone ){
+        @content;
+    }
+
+}
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media ( max-width: $desktop ){
+        @content;
+    }
+
+}
+@mixin desktopXL {
+    @media ( min-width: $desktopXL ){
+        @content;
+    }
+
+}
+
+@mixin grid( $columnas, $espacio ) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espacio;
+}
+
+@mixin resetear-lista{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

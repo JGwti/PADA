@@ -1,0 +1,194 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.header {
+    display: flex;
+    background-color: $color-gren-one;
+    width: 100%;
+    height: 5rem;
+
+    @include tablet {
+        background-color: $color-gren-one;
+        width: 100%;
+        height: 10rem;
+        display: grid;
+        justify-content: center;
+    }
+
+    .icons-information,
+    .contact-information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+
+        @include tablet {
+            background-color: $color-gren-one;
+            width: 100%;
+            height: 5rem;
+            margin: 0;
+
+            .contact-information {
+                justify-content: space-around;
+            }
+        }
+    }
+
+    i {
+        margin: .2rem;
+    }
+}
+
+/*
+.header {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    background-color: $color-gren-one;
+
+    .icons-information,
+    .contact-information {
+        justify-content: center;
+        margin: .5rem;
+        padding: .5rem;
+        width: 50%;
+        height: 100%;
+
+        i {
+            margin: .2rem;
+        }
+
+    }
+}
+*/
+
+
+.content-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+    background-color: $color-blue;
+
+    @include tablet {
+        background-color: $color-blue;
+        width: 100%;
+        height: 10rem;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+}
+
+.nav {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.nav li {
+    height: 50px;
+    background-color: rgb(0, 139, 139);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.nav li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.li a ul li a {
+    background-color: #2f4f4f;
+}
+
+.nav li a:hover {
+    background-color: #2f4f4f;
+}
+
+.nav>li {
+    float: left;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.nav li:hover>ul {
+    display: block;
+}
+
+.nav li ul li {
+    position: relative;
+
+}
+
+.nav li ul li ul {
+    right: -100px;
+    top: 0px;
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.img-u {
+    height: 100%;
+    background-color: $color-gren-one;
+    padding: 1rem 0;
+
+
+    @include desktop {
+        height: 100%;
+        display: grid;
+        align-content: space-between;
+
+        @include phone {
+            height: 68%;
+            display: grid;
+            align-content: space-between;
+        }
+    }
+
+
+
+}
+
+.backgroundImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //width: 100%;
+    height: 100%; //
+}
+
+.Image {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.site-footer {
+    background-color: $color-greys;
+    padding: 1rem;
+
+    p {
+        margin: 0;
+        text-align: center;
+        color: white;
+    }
+}
